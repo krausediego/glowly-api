@@ -1,0 +1,25 @@
+meta {
+  name: recovery-send-code
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseURL}}{{prefix}}/auth/recovery/send-code
+  body: json
+  auth: none
+}
+
+headers {
+  ~authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3OWYxZTc1ZS1mOThhLTQ2YWEtODVmYS01ZjVhM2ExNzY4ZGMiLCJpYXQiOjE3MzQ2MTU2ODQsImV4cCI6MTczNDYxNjI4NH0.cguRWkhklqMwhP2ZwbdVI80Re4JpGWDUhjOeMyYpEhI
+}
+
+body:json {
+  {
+    "email": "diegoemanuelk@gmail.com"
+  }
+}
+
+vars:post-response {
+  recoveryToken1: res.body.token
+}

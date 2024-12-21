@@ -1,0 +1,24 @@
+meta {
+  name: sign-in
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseURL}}{{prefix}}/auth/sign-in
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "diegoemanuelk@gmail.com",
+    "password": "diego0123",
+    "customer": false,
+    "remember": true
+  }
+}
+
+vars:post-response {
+  authToken: res.body.token
+}

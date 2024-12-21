@@ -1,0 +1,27 @@
+meta {
+  name: create establishment
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseURL}}{{prefix}}/establishment/create
+  body: json
+  auth: none
+}
+
+headers {
+  authorization: {{authToken}}
+}
+
+body:json {
+  {
+    "name": "Barbearia do seu zé",
+    "phone": "(47) 99265-6515",
+    "description": "Uma descrição qualquer"
+  }
+}
+
+vars:post-response {
+  authToken: res.body.token
+}

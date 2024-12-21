@@ -1,0 +1,25 @@
+meta {
+  name: recovery-validate-code
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseURL}}{{prefix}}/auth/recovery/validate-code
+  body: json
+  auth: none
+}
+
+headers {
+  authorization: {{recoveryToken1}}
+}
+
+body:json {
+  {
+    "code": "MY7F5H"
+  }
+}
+
+vars:post-response {
+  recoveryToken2: res.body.token
+}

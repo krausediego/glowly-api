@@ -1,0 +1,2 @@
+ALTER TABLE "establishment_reviews" RENAME COLUMN "name_user" TO "user_id";--> statement-breakpoint
+ALTER TABLE "establishment_reviews" ADD CONSTRAINT "establishment_reviews_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE set null ON UPDATE no action;
