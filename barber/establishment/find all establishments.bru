@@ -1,0 +1,15 @@
+meta {
+  name: find all establishments
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseURL}}{{prefix}}/establishment/find-all
+  body: none
+  auth: none
+}
+
+headers {
+  authorization: {{authToken}}
+}

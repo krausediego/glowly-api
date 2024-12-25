@@ -8,6 +8,7 @@ import {
   establishmentReviews,
   establishmentServices,
   establishmentSpecialists,
+  userFavorites,
 } from '.';
 
 export const establishments = pgTable('establishment', {
@@ -32,5 +33,6 @@ export const establishmentRelations = relations(
     establishmentService: many(establishmentServices),
     establishmentReview: many(establishmentReviews),
     establishmentSpecialist: many(establishmentSpecialists),
+    favorite: many(userFavorites),
   }),
 );

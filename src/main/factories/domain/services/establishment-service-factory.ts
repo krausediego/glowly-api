@@ -1,14 +1,26 @@
-import { Establishment, EstablishmentCreate } from '@/domain/interfaces';
-import { EstablishmentCreateService } from '@/domain/services/establishment';
+import {
+  Establishment,
+  EstablishmentCreate,
+  EstablishmentFindAll,
+} from '@/domain/interfaces';
+import {
+  EstablishmentCreateService,
+  EstablishmentFindAllService,
+} from '@/domain/services/establishment';
 
-import { makeToken } from '../../infra';
+import { makeAws, makeToken } from '../../infra';
 
 const establishmentCreate = (): EstablishmentCreate => {
-  return new EstablishmentCreateService(makeToken());
+  return new EstablishmentCreateService(makeToken(), makeAws());
+};
+
+const establishmentFindAll = (): EstablishmentFindAll => {
+  return new EstablishmentFindAllService();
 };
 
 const services = {
   establishmentCreate,
+  establishmentFindAll,
 };
 
 const makeEstablishmentService = (

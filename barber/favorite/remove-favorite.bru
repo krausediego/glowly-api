@@ -1,0 +1,21 @@
+meta {
+  name: remove-favorite
+  type: http
+  seq: 2
+}
+
+delete {
+  url: {{baseURL}}{{prefix}}/favorite/remove
+  body: json
+  auth: none
+}
+
+headers {
+  authorization: {{authToken}}
+}
+
+body:json {
+  {
+    "establishmentId": "9e80eeb9-e516-4be1-aea3-f7dc726fedf6"
+  }
+}

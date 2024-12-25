@@ -12,6 +12,14 @@ export const establishmentCreateValidateSchema = yup.object({
       .string()
       .matches(phoneRegex, 'Informe um telefone válido.')
       .required('O telefone é obrigatório.'),
+    categories: yup.string().required('As categorias são obrigatórias.'),
+    street: yup.string().required('A rua é obrigatória.'),
+    neighborhood: yup.string().required('O bairro é obrigatório.'),
+    state: yup.string().required('O estado é obrigatório.'),
+    city: yup.string().required('A cidade é obrigatória.'),
+    cep: yup.string().required('O CEP é obrigatório.'),
+    number: yup.number(),
     description: yup.string(),
+    logo: yup.mixed(),
   }),
 });

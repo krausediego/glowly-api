@@ -1,4 +1,4 @@
-import { Locals } from '@/application/interfaces';
+import { Locals, MulterFile } from '@/application/interfaces';
 
 export interface EstablishmentCreate {
   run(
@@ -11,12 +11,20 @@ export namespace EstablishmentCreate {
     name: string;
     phone: string;
     userId: string;
+    categories: string;
+    street: string;
+    neighborhood: string;
+    state: string;
+    city: string;
+    number: number;
+    cep: string;
     description?: string;
-    logo?: File;
+    logo?: MulterFile;
   };
 
   export type ParamsService = {
     params: Params;
+    file?: Record<string, any>;
     locals: Locals;
   };
 

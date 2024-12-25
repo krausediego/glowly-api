@@ -29,6 +29,20 @@
       "when": 1734722800910,
       "tag": "0003_salty_lester",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1734740578170,
+      "tag": "0004_kind_sebastian_shaw",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1734831594384,
+      "tag": "0005_red_echo",
+      "breakpoints": true
     }
   ]
 }

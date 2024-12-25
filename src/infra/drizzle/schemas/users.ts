@@ -8,6 +8,7 @@ import {
   profiles,
   recoveryCodes,
   userAddresses,
+  userFavorites,
 } from '.';
 
 export const users = pgTable('users', {
@@ -34,4 +35,5 @@ export const usersRelations = relations(users, ({ one, many }) => ({
   establishmentSpecialist: many(establishmentSpecialists),
   recoveryCode: many(recoveryCodes),
   review: many(establishmentReviews),
+  favorite: many(userFavorites),
 }));

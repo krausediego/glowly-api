@@ -1,7 +1,11 @@
-import { EstablishmentCreate } from '.';
+import { EstablishmentCreate, EstablishmentFindAll } from '.';
 
 export namespace Establishment {
-  export type EstablishmentServicesName = 'establishmentCreate';
+  export type EstablishmentServicesName =
+    | 'establishmentCreate'
+    | 'establishmentFindAll';
 
-  export type EstablishmentServices = () => EstablishmentCreate;
+  export type EstablishmentServices = () =>
+    | EstablishmentCreate
+    | EstablishmentFindAll;
 }

@@ -14,6 +14,7 @@ export const adaptRoute = (controller: Controller) => {
       data,
       method: req.method,
       path: req.path,
+      file: req.file,
       locals: req.locals,
     });
 

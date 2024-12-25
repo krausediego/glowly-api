@@ -6,6 +6,7 @@ export namespace Http {
     path: string;
     data: Data;
     locals: Locals;
+    file?: any;
   }
 
   export interface Response {

@@ -6,7 +6,7 @@ meta {
 
 post {
   url: {{baseURL}}{{prefix}}/establishment/create
-  body: json
+  body: multipartForm
   auth: none
 }
 
@@ -18,10 +18,24 @@ body:json {
   {
     "name": "Barbearia do seu zé",
     "phone": "(47) 99265-6515",
-    "description": "Uma descrição qualquer"
+    "description": "Uma descrição qualquer",
+    "logo":
   }
 }
 
+body:multipart-form {
+  name: Barbearia do seu zé
+  phone: (47) 99265-6515
+  description: Uma descrição qualquer
+  categories: HAIRCUT,MANICURE
+  street: Rua adolfo antonio emmendoerfer
+  neighborhood: Rio molha
+  state: Santa catarina
+  city: Jaraguá do sul
+  cep: 89259-695
+  ~logo: @file(C:\Users\Diego\Pictures\logo.jpg)
+}
+
 vars:post-response {
-  authToken: res.body.token
+  ~authToken: res?.body?.token
 }

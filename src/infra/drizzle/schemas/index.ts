@@ -12,3 +12,5 @@ export * from './appointments';
 export * from './recovery_codes';
 export * from './permissions';
 export * from './establishment_specialist_permissions';
+export * from './user_favorites';
+export * from './categories';
